@@ -11,7 +11,8 @@ const connect = function () {
   conn.setEncoding("utf8");
 
   conn.on("connect", () => {
-    console.log("Connecting ...");
+    console.log("Successfully connected to game server ...");
+    conn.write('Name: NAM');
   });
 
   conn.on('data', function(message){ // this is how we receive
@@ -32,26 +33,26 @@ module.exports = { connect }
 // const port = 50541;  //8009;
 
 // const configObj = {
-// port: port,
-// host: 'localhost'
+//   port: port,
+//   host: 'localhost'
 // };
 
 // const client = net.createConnection(configObj);
 
 // client.on('connect',function(){
-// console.log('client is connected to server.');
+//   console.log('client is connected to server.');
 // });
 
 // client.on('data', function(message){ // this is how we receive
-// console.log(`Server says: ${message}`);
+//   console.log(`Server says: ${message}`);
 // });
 
 // process.stdin.on('data', function(message){ // this is how we send
-// client.write(message);
+//   client.write(message);
 // });
 
 // client.on('end', function(){
-// console.log('client is disconnected from the server.');
+//   console.log('client is disconnected from the server.');
 // }); 
 
 //----------------------------------------------------------
