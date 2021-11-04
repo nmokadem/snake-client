@@ -13,14 +13,6 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Successfully connected to game server ...");
     conn.write('Name: NAM');
-    // let move = 0;
-    // setInterval(() => {
-    //   move = Math.floor(Math.random() * 10) + 1;
-    //   if (move % 2 === 0) conn.write("Move: up");   
-    //   if (move % 3 === 0) conn.write("Move: down");   
-    //   if (move % 4 === 0) conn.write("Move: left");   
-    //   if (move % 5 === 0) conn.write("Move: right");   
-    // },50);
   });
   
   conn.on('data', function(message){ // this is how we receive
