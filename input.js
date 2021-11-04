@@ -31,6 +31,19 @@ const setupInput = function (conn) {
       //console.log("Move: right");
       connection.write("Move: right");
     }
+
+    if (key == '\u001B\u005B\u0041') {
+      connection.write('Say: Go U'); 
+    }
+    if (key == '\u001B\u005B\u0043') {
+      connection.write('Say: Go R'); 
+    }
+    if (key == '\u001B\u005B\u0042') {
+      connection.write('Say: Go D'); 
+    }
+    if (key == '\u001B\u005B\u0044') {
+      connection.write('Say: Go L'); 
+    }
  
   };
   stdin.on("data", handleUserInput);
